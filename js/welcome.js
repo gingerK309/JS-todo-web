@@ -1,3 +1,4 @@
+const weatherInfo = document.querySelector(".weather");
 const loginForm = document.querySelector(".login-form");
 const loginInput = loginForm.querySelector("input");
 const loginBtn = document.querySelector("button");
@@ -16,8 +17,7 @@ function onGeoFind(position) {
       const place = data.name;
       const temp = data.main.temp;
       const weather = data.weather[0].main;
-      logOn.innerText = `${saveUsername}님! 현재 ${place}에 계시는군요! 
-      ${place}의 기온은 ${temp}°C 이고, 날씨는 ${weather}입니다. :)`;
+      weatherInfo.innerText = `📌\t ${place} @ ${weather} | ${temp}°C :) `;
     });
 }
 function onGeoError() {
@@ -44,5 +44,6 @@ if (saveUsername === null) {
   loginForm.classList.remove(HIDDEN_CLASS_NAME);
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
+  navigator.geolocation.getCurrentPosition(onGeoFind, onGeoError);
   sayWelcome(saveUsername);
 }

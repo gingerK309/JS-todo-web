@@ -53,7 +53,7 @@ p {
   font-size: x-large;
 }
 .log-on {
-  font-size: small;
+  font-size: medium;
   font-weight: bold;
   margin-top: 0.5em;
   padding-bottom: 1em;
@@ -120,6 +120,7 @@ h5 {
   justify-content: center;
   align-items: flex-end;
 }
+
 input {
   margin-left: 8em;
   margin-right: 8em;
@@ -143,6 +144,10 @@ span {
 
 .left:not(.center) {
   text-align: start;
+}
+.weather {
+  font-size: small;
+  align-self: center;
 }
 
 ul {
