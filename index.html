@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>To DO Your List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <div class="empty">
+          <p class="quotes center"></p>
+          </div>
+        </div>
+        <div class="wrap center">
+          <div class="card center">
+            <div class="memo-line">
+              <h3 class="today"></h3>
+              <h1 class="clock"></h1>
+              <p class="log-on hidden"></p>
+              <form class="login-form hidden form">
+                <input
+                  type="text"
+                  class="line center box"
+                  placeholder="이름을 알려주세요 💬"
+                  required
+                  maxlength="15"
+                />
+                <button type="submit" class="hidden"></button>
+              </form>
+            </div>
+            <div>
+              <form class="todo-form form">
+                <div>
+                  <h2 class="lists">TO DO</h2>
+                </div>
+                <input
+                  id="todo"
+                  type="text"
+                  class="write center box"
+                  placeholder="할 일을 적어봅시다 ✍"
+                  required
+                />
+              </form>
+            </div>
+            <div>
+              <ul class="todo-list center"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/welcome.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes_api.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+  </body>
+</html>

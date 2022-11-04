@@ -1,0 +1,196 @@
+.hidden {
+  display: none;
+}
+
+.under {
+  position: relative;
+  height: 1em;
+  bottom: 0;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+.container {
+  display: inline;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.wrap {
+  display: inline-block;
+  align-self: auto;
+  word-break: break-all;
+  white-space: normal;
+  overflow: scroll;
+  display: grid;
+}
+
+.card {
+  margin: 1em;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  place-items: center;
+  place-content: center;
+  opacity: 0.8;
+}
+
+.center {
+  align-items: center;
+  place-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.memo-line {
+  border-bottom: 2px dotted lightgray;
+}
+
+p {
+  font-size: x-large;
+}
+.log-on {
+  font-size: small;
+  font-weight: bold;
+  margin-top: 0.5em;
+  padding-bottom: 1em;
+  margin-bottom: 0.8em;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+h1 {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  font-size: 2.5em;
+}
+h2 {
+  font-size: large;
+  margin-top: 0.7em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+h3 {
+  font-size: 0.9em;
+  margin-top: 1.8em;
+  margin-bottom: 0;
+}
+h5 {
+  font-size: large;
+  margin-top: 0.2em;
+  margin-right: 0.5em;
+  text-align: end;
+}
+
+.quotes {
+  color: whitesmoke;
+
+  text-shadow: 2px 1px 2px #000;
+  margin-left: 1.8em;
+  margin-right: 1.8em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: large;
+  font-weight: lighter;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+.line {
+  border: none;
+}
+.write {
+  border: none;
+  border-bottom: 2px dashed lightgray;
+}
+.form {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+.box {
+  outline: none;
+  width: 13em;
+  height: 1.7em;
+  background: transparent;
+}
+.empty {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+input {
+  margin-left: 8em;
+  margin-right: 8em;
+  font-size: medium;
+}
+input::placeholder {
+  font-size: 0.8em;
+  font-style: italic;
+}
+.todo-list {
+  margin-bottom: 0.8em;
+  display: inline-block;
+  text-align: start;
+}
+span {
+  margin: 0.1em;
+  margin-bottom: 0.5em;
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.left:not(.center) {
+  text-align: start;
+}
+
+ul {
+  margin: auto;
+}
+li {
+  margin-bottom: 0.5em;
+  list-style-position: outside;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  font-weight: lighter;
+}
+span {
+  font-size: small;
+}
+li::marker {
+  font-size: small;
+}
+
+img {
+  position: absolute;
+  animation: fadeIn 0.5s linear;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  z-index: -1;
+  background-size: fill;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  -ms-overflow-style: none;
+  overflow-y: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;
+}
+
+::-webkit-scrollbar {
+  width: 100vw;
+  display: none;
+}
