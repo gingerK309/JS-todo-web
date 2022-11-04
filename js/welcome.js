@@ -4,8 +4,7 @@ const loginBtn = document.querySelector("button");
 const logOn = document.querySelector(".log-on");
 const HIDDEN_CLASS_NAME = "hidden";
 const USER_NAME = "name";
-import { config } from "API_KEY.js";
-const API_KEY = config.apikey;
+const API_KEY = "eb64197db18eabcd24b6f750bf2847e8";
 
 function onGeoFind(position) {
   const lat = position.coords.latitude;
