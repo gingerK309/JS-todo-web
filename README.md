@@ -21,3 +21,5 @@
 
 ## 💻프로젝트 결과 
 - https://gingerk309.github.io/JS-todo-web/
+
+![KakaoTalk_20221106_193019986_AdobeExpress](https://user-images.githubusercontent.com/49302989/200165824-b663fd6c-d373-4b84-8940-bc2706b9c1ac.gif)
