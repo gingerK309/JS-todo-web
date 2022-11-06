@@ -185,9 +185,11 @@ span {
 }
 
 ul {
+  padding-left: 0em;
   margin-top: 0.2em;
   margin-bottom: 2.3em;
   margin-right: 1.2em;
+  margin-left: 1.2em;
   list-style: none;
 }
 
