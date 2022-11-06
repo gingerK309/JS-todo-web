@@ -18,7 +18,7 @@ function wirteToDO(newObj) {
   li.appendChild(span);
   li.appendChild(delBtn);
   span.innerText = newObj.text;
-  doneBtn.innerText = "✅";
+  doneBtn.innerText = "✔";
   delBtn.innerText = "❌";
   doneBtn.addEventListener("click", doneToDO);
   delBtn.addEventListener("click", deleteToDO);
