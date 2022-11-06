@@ -2,21 +2,43 @@ const toDoForm = document.querySelector(".todo-form");
 const toDoInput = document.getElementById("todo");
 const toDoList = document.querySelector(".todo-list");
 const TODO = "todos";
+const IS_DONE = "true";
+const IS_NOT_DONE = "false";
 let toDos = [];
+
 function wirteToDO(newObj) {
   const li = document.createElement("li");
   li.id = newObj.id;
+  li.classList.add(newObj.isDone);
+  const doneBtn = document.createElement("button");
   const span = document.createElement("span");
-  const button = document.createElement("button");
+  const delBtn = document.createElement("button");
+  delBtn.classList.add("delete");
+  li.appendChild(doneBtn);
   li.appendChild(span);
-  li.appendChild(button);
+  li.appendChild(delBtn);
   span.innerText = newObj.text;
-  button.innerText = "❌";
-  button.addEventListener("click", deleteToDO);
+  doneBtn.innerText = "✅";
+  delBtn.innerText = "❌";
+  doneBtn.addEventListener("click", doneToDO);
+  delBtn.addEventListener("click", deleteToDO);
   toDoList.appendChild(li);
-  if (toDoList.childElementCount === 0) {
-    h2.classList.add("hidden");
-  }
+}
+function doneToDO(event) {
+  const doneLi = event.target.parentElement;
+  toDos.forEach((toDo) => {
+    if (toDo.id === parseInt(doneLi.id) && toDo.isDone === IS_NOT_DONE) {
+      toDo.isDone = IS_DONE;
+      doneLi.classList.remove(IS_NOT_DONE);
+      doneLi.classList.add(IS_DONE);
+      saveToDO();
+    } else if (toDo.id === parseInt(doneLi.id) && toDo.isDone === IS_DONE) {
+      toDo.isDone = IS_NOT_DONE;
+      doneLi.classList.remove(IS_DONE);
+      doneLi.classList.add(IS_NOT_DONE);
+      saveToDO();
+    }
+  });
 }
 
 function deleteToDO(event) {
@@ -37,6 +59,7 @@ function handleToDoSubmit(event) {
   const newObj = {
     text: newToDo,
     id: Date.now(),
+    isDone: "false",
   };
   toDoInput.value = "";
   toDos.push(newObj);

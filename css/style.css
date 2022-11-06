@@ -9,24 +9,39 @@
 }
 
 button {
+  font-size: medium;
   border: 0;
   background-color: transparent;
 }
 
+button:hover {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.delete {
+  font-size: small;
+}
+
+.true {
+  text-decoration: line-through;
+  color: gray;
+}
+
 .container {
   display: inline;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   overflow-y: scroll;
 }
 
 .wrap {
-  display: inline-block;
+  flex-direction: column;
+  display: flex;
   align-self: auto;
-  word-break: break-all;
-  white-space: normal;
   overflow: scroll;
-  display: grid;
+  overflow-x: hidden;
 }
 
 .card {
@@ -45,25 +60,23 @@ button {
   text-align: center;
 }
 
-.memo-line {
-  border-bottom: 2px dotted lightgray;
-}
-
 p {
   font-size: x-large;
 }
+
 .log-on {
   font-size: medium;
   font-weight: bold;
-  margin-top: 0.5em;
+  margin-top: 0.7em;
   padding-bottom: 1em;
   margin-bottom: 0.8em;
   margin-left: 3em;
   margin-right: 3em;
 }
+
 h1 {
-  margin-bottom: 0.5em;
-  margin-top: 0;
+  margin-bottom: 0;
+  margin-top: 0.6em;
   font-size: 2.5em;
 }
 h2 {
@@ -73,9 +86,9 @@ h2 {
   margin-right: 0.5em;
 }
 h3 {
-  font-size: 0.9em;
-  margin-top: 1.8em;
-  margin-bottom: 0;
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 1.8em;
 }
 h5 {
   font-size: large;
@@ -97,28 +110,45 @@ h5 {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
 }
+
 .line {
   border: none;
 }
+
 .write {
   border: none;
   border-bottom: 2px dashed lightgray;
 }
+
 .form {
   margin-bottom: 0.5em;
   margin-top: 0;
 }
+
 .box {
   outline: none;
   width: 13em;
   height: 1.7em;
   background: transparent;
 }
+
 .empty {
-  height: 25vh;
+  height: 15vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+.weather {
+  margin-top: 2em;
+  margin-bottom: 0;
+  font-weight: bolder;
+  font-size: small;
+  align-self: center;
+}
+
+.memo-line {
+  border-bottom: 2px dotted lightgray;
 }
 
 input {
@@ -126,6 +156,14 @@ input {
   margin-right: 8em;
   font-size: medium;
 }
+
+@media (max-width: 500px) {
+  input {
+    margin: 0;
+    font-size: medium;
+  }
+}
+
 input::placeholder {
   font-size: 0.8em;
   font-style: italic;
@@ -145,24 +183,26 @@ span {
 .left:not(.center) {
   text-align: start;
 }
-.weather {
-  font-size: small;
-  align-self: center;
-}
 
 ul {
-  margin: auto;
+  margin-top: 0.2em;
+  margin-bottom: 2.3em;
+  margin-right: 1.2em;
+  list-style: none;
 }
+
 li {
   margin-bottom: 0.5em;
   list-style-position: outside;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
   font-weight: lighter;
 }
+
 span {
-  font-size: small;
+  font-size: medium;
+  /*border-bottom: 2px dashed lightgray;*/
 }
+
 li::marker {
   font-size: small;
 }
@@ -187,8 +227,9 @@ body {
 }
 
 body {
+  word-break: break-all;
+  white-space: normal;
   display: flex;
-  flex-direction: column;
   -ms-overflow-style: none;
   overflow-y: auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
