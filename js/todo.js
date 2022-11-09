@@ -18,7 +18,7 @@ function wirteToDO(newObj) {
   li.appendChild(span);
   li.appendChild(delBtn);
   span.innerText = newObj.text;
-  doneBtn.innerText = "✔";
+  doneBtn.innerText = "✅";
   delBtn.innerText = "❌";
   doneBtn.addEventListener("click", doneToDO);
   delBtn.addEventListener("click", deleteToDO);
@@ -51,7 +51,6 @@ function deleteToDO(event) {
 function saveToDO() {
   localStorage.setItem(TODO, JSON.stringify(toDos));
 }
-function loadToDO() {}
 
 function handleToDoSubmit(event) {
   event.preventDefault();

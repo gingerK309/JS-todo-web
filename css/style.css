@@ -44,13 +44,28 @@ button:hover {
   overflow-x: hidden;
 }
 
-.card {
+.card-light {
   margin: 1em;
   border-radius: 10px;
   background-color: whitesmoke;
   place-items: center;
   place-content: center;
   opacity: 0.8;
+}
+
+.card-dark {
+  margin: 1em;
+  border-radius: 10px;
+  background-color: black;
+  color: whitesmoke;
+  place-items: center;
+  place-content: center;
+  opacity: 0.8;
+}
+
+.mode {
+  align-self: start;
+  font-size: x-large;
 }
 
 .center {
@@ -103,8 +118,7 @@ h5 {
 
 .quotes {
   color: whitesmoke;
-
-  text-shadow: 2px 1px 2px #000;
+  text-shadow: 2px 1px 2px black;
   margin-left: 1.8em;
   margin-right: 1.8em;
   margin-top: 1em;
@@ -130,6 +144,7 @@ h5 {
 }
 
 .box {
+  color: gray;
   outline: none;
   width: 13em;
   height: 1.7em;
