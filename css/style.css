@@ -172,14 +172,14 @@ h5 {
 }
 
 input {
-  margin-left: 8em;
-  margin-right: 8em;
+  margin-left: 10em;
+  margin-right: 10em;
   font-size: medium;
 }
 
 @media (max-width: 500px) {
   input {
-    margin: 0;
+    margin: 1;
     font-size: medium;
   }
 }
