@@ -64,6 +64,7 @@ button:hover {
 }
 
 .mode {
+  margin-top: 0.2em;
   align-self: start;
   font-size: x-large;
 }
