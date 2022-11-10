@@ -179,7 +179,7 @@ input {
 
 @media (max-width: 500px) {
   input {
-    margin: 1em;
+    margin: 0;
     font-size: medium;
   }
 }
