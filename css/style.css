@@ -139,6 +139,7 @@ p {
 }
 
 h1 {
+  display: inline;
   margin-bottom: 0;
   margin-top: 0.6em;
   font-size: 2.5em;
@@ -214,7 +215,11 @@ h5 {
   justify-content: center;
   align-items: flex-end;
 }
-
+.clock-box {
+  margin-top: 1.8em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
 .weather {
   margin-top: 2em;
   margin-bottom: 0;
@@ -291,7 +296,7 @@ li::marker {
 
 img {
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.9;
   animation: fadeIn 0.5s linear;
   top: 0;
   left: 0;

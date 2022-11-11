@@ -1,5 +1,6 @@
 const clock = document.querySelector(".clock");
 const today = document.querySelector(".today");
+const checkAMorPM = document.querySelector(".am-or-pm");
 
 function getDayOfWeek() {
   const week = [
@@ -21,10 +22,13 @@ function getTimer() {
   const dayOfWeek = getDayOfWeek();
   const day = date.getDate().toString();
   today.innerText = `${month}월 ${day}일 ${dayOfWeek}`;
-  const hours = date.getHours().toString().padStart(2, "0");
+  const hours = date.getHours();
+  const printHours = hours >= 13 ? (hours % 12).toString() : hours.toString();
+  const AMorPM = hours >= 12 ? "오후" : "오전";
   const minutes = date.getMinutes().toString().padStart(2, "0");
   const seconds = date.getSeconds().toString().padStart(2, "0");
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+  checkAMorPM.innerText = `${AMorPM} `;
+  clock.innerText = `${printHours}:${minutes}:${seconds}`;
 }
 getTimer();
 setInterval(getTimer, 1000);
