@@ -28,7 +28,8 @@ function getTimer() {
   const minutes = date.getMinutes().toString().padStart(2, "0");
   const seconds = date.getSeconds().toString().padStart(2, "0");
   checkAMorPM.innerText = `${AMorPM} `;
-  clock.innerText = `${printHours}:${minutes}:${seconds}`;
+  if (AMorPM === "오전" && hours === 0) clock.innerText = `${hours + 12}:${minutes}:${seconds}`;
+  else clock.innerText = `${printHours}:${minutes}:${seconds}`;
 }
 getTimer();
 setInterval(getTimer, 1000);
